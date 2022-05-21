@@ -1,6 +1,8 @@
 
 import { useState } from 'react';
 import './styles/styles.scss'
+import { PartidaView } from './views/partida/partida'
+import {MenuView} from './views/menu/menu';
 
 const ESTADOS = {
   partidaIniciada: 'PARTIDA_INICIADA',
@@ -10,7 +12,7 @@ const ESTADOS = {
 }
 
 function App() {
-
+  
   const [gameState, setGameState] = useState({
     puntaje: 0,
     intentos: 0,
@@ -22,9 +24,7 @@ function App() {
  
   return (
     <div className="App">
-  
-      <h1 className='titulo'>Dev Hangman</h1>
-    
+        <MenuView/>
     </div>
   );
 }

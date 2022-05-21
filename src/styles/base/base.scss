@@ -12,15 +12,18 @@
     --on-primary-variant:#FFF;
 }
 
+body{
+    font-family: var(--font-roboto);
+    background-image: url('../../assets/images/background.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 button{
     border: none;
     outline: none;
-}
-
-
-body{
-    font-family: var(--font-roboto);
 }
 
 
