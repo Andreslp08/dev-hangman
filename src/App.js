@@ -1,3 +1,6 @@
+import { Icon } from '@iconify/react';
+import './styles/styles.scss'
+
 function App() {
   return (
     <div className="App">
