@@ -1,4 +1,4 @@
-import { ProgressComponent } from './components/ProgressComponent'
+import { ProgressComponent } from './components/progress'
 
 export const MenuView = () => {
   return (
