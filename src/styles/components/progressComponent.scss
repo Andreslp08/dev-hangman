@@ -1,0 +1,13 @@
+.box-progress{
+    background-color: #D9D9D9;
+    min-width: 570px;
+    min-height: 598px;
+}
+
+@media (max-width: 540px) {
+    .box-progress{
+        background-color: #D9D9D9;
+        min-width: 0px;
+        min-height: 0px;
+    }
+}

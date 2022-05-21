@@ -1,0 +1,5 @@
+.grid-abecedario{
+    display: grid;
+    grid-template-columns: repeat(7, min-content);
+    grid-template-rows: repeat(5, min-content);
+}
