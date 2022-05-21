@@ -1,8 +1,7 @@
-import { Letra } from "../letra/letra";
+import { Letra } from "../letra/Letra";
 
 
 export const Palabra = ({palabra}) => {
-  console.log("aaa");
   return (
     <div>
      <div className="letter-container">

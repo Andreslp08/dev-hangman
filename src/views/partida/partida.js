@@ -1,8 +1,8 @@
 import { ProgressComponent } from "../menu/components/progress";
 import { Abecedario } from "./components/abecedario/abecedario"
-import { Horas } from "./components/horas/horas"
+import { Horas } from "./components/horas/Horas"
 import { Palabra } from "./components/palabra/palabra";
-import { Puntaje } from './components/puntaje/puntaje';
+import { Puntaje } from './components/puntaje/Puntaje';
 
 
 export const PartidaView = () => {
