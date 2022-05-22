@@ -74,7 +74,8 @@ export const PartidaView = () => {
                 ...payloadTemplate,
                 intentos: INTENTOS[appStatus.dificultad],
                 categoria: randomCategory?.name,
-                palabra: randomWord
+                palabra: randomWord,
+                dificultad:appStatus.dificultad
             }
         }
         dispatch(action);
