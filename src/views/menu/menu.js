@@ -46,20 +46,19 @@ export const MenuView = () => {
   }
 
   return (
-    <div>
-        <div className="flex-items">
+    <>
+        <div className="menu-view">
             <div className="button-difficult">
                 <button className="button primary-button" onClick={()=> hanndleChoseDifficult(DIFFICULTIES.EASY)}>Facil</button>    
                 <button className="button primary-button" onClick={()=> hanndleChoseDifficult(DIFFICULTIES.NORMAL)}>Normal</button>    
                 <button className="button primary-button" onClick={()=> hanndleChoseDifficult(DIFFICULTIES.HARD)}>Dificil</button>    
             </div>
-            <div>
-                <h1 className='title'>DevHangman</h1>
-             
+            <div className='cover'>
+                <h1 className='title titulo'>Dev Hangman</h1>
                 <ProgressComponent />
             </div>
         </div>
         
-    </div>
+    </>
   )
 }
