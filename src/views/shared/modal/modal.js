@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 
 export const Modal = (props) => {
-    const { title, visible, setVisible } = props;
+    const { title, visible, setVisible, hideCloseButton } = props;
 
     const close = () => {
             setVisible&&setVisible(false);
@@ -16,7 +16,10 @@ export const Modal = (props) => {
         <div className={`modal`}>
             <div className="title-bar">
                 <p className="title">{title}</p>
+                {
+                    Boolean(hideCloseButton)===false&&
                 <Icon icon="carbon:close" className="close-button" onClick={()=>close()} />
+                }
             </div>
             <div className="body">
                 {props?.children}

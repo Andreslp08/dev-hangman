@@ -43,7 +43,6 @@ export const PartidaView = () => {
     useEffect(()=>{
         const handleWinOrDefeat = ()=>{
             const completed = WordService.areEqual(appStatus?.palabra, appStatus?.palabraInsertada);
-            console.log('compare',appStatus?.palabra, appStatus?.palabraInsertada);
             const intentos = appStatus?.intentos;
            if(intentos > 0 && completed){
               setVisibilityWinnerModal(true);
@@ -115,34 +114,41 @@ export const PartidaView = () => {
         dispatch(action);
     }
 
+    const getDifficultybyId = (id)=>{
+        switch (id) {
+            case DIFFICULTIES.EASY:
+                return 'Fácil'
+            case DIFFICULTIES.NORMAL:
+                return 'Normal'
+        
+            case DIFFICULTIES.HARD:
+                return 'Difícil'
+            default:
+                return '';
+        }
+    }
+
 
     return (
-        <div>
-            <div className="flex-item-partida">
-                <ConfigButton onSelect={() => setVisibilityConfigModal(true)} />
-                <div className="category">
-                    <h1>{appStatus?.categoria || 'N/A'}</h1>
+        <div className="partida-view">
+            <div className="flex w-full justify-between p-2">
+                <div className="flex items-center">
+                    <ConfigButton onSelect={() => setVisibilityConfigModal(true)} />
+                    <p className="m-1" style={{ fontWeight: 'bold' }}>Modo {getDifficultybyId(appStatus?.dificultad) || 'N/A'}</p>
                 </div>
-                <div>
-                    <Puntaje />
-                </div>
-
+                <Puntaje />
             </div>
-
+            <h2 className="titulo text-center m-1">{appStatus?.categoria || 'N/A'}</h2>
             <div className="grid-item-partida">
-                <div>
+                <div className="flex flex-col items-center justify-around">
                     <Palabra word={appStatus?.palabra} enteredCharacters={enteredCharacters} />
-                </div>
-                <div>
-                    <Horas />
-                </div>
-                <div>
-                    <Abecedario 
-                        onSelectChar={(char) => addChar(char)} 
-                        enteredCharacters={enteredCharacters} 
+                    <Abecedario
+                        onSelectChar={(char) => addChar(char)}
+                        enteredCharacters={enteredCharacters}
                     />
                 </div>
-                <div>
+                <div className="flex flex-col items-center">
+                    <Horas />
                     <ProgressComponent />
                 </div>
             </div>

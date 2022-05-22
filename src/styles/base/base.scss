@@ -120,6 +120,14 @@ button{
     justify-content: center;
 }
 
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-around{
+    justify-content: space-around;
+}
+
 .center{
     justify-content: center;
     align-items: center;
@@ -133,7 +141,11 @@ button{
     flex-direction: row;
 }
 
-
+//width
+.w-full{
+    width: 100%;
+}
+//text
 .text{
     &-sm {
         font-size: 12px;

@@ -7,7 +7,8 @@ export const WinnerModal = (props) => {
     return (
         <Modal
             visible={visible}
-            setVisible={setVisible}>
+            setVisible={setVisible}
+            hideCloseButton={true}>
             <div className="flex flex-col items-center">
                 <Icon icon={'emojione-v1:crown'} style={{ fontSize: 50 }} />
                 <p className="titulo text-lg m-1">Ganaste!</p>

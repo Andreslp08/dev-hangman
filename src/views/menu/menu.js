@@ -48,13 +48,13 @@ export const MenuView = () => {
   return (
     <>
         <div className="menu-view">
+            <h1 className='title titulo'>Dev Hangman</h1>
             <div className="button-difficult">
-                <button className="button primary-button" onClick={()=> hanndleChoseDifficult(DIFFICULTIES.EASY)}>Facil</button>    
+                <button className="button primary-button" onClick={()=> hanndleChoseDifficult(DIFFICULTIES.EASY)}>Fácil</button>    
                 <button className="button primary-button" onClick={()=> hanndleChoseDifficult(DIFFICULTIES.NORMAL)}>Normal</button>    
-                <button className="button primary-button" onClick={()=> hanndleChoseDifficult(DIFFICULTIES.HARD)}>Dificil</button>    
+                <button className="button primary-button" onClick={()=> hanndleChoseDifficult(DIFFICULTIES.HARD)}>Difícil</button>    
             </div>
             <div className='cover'>
-                <h1 className='title titulo'>Dev Hangman</h1>
                 <ProgressComponent />
             </div>
         </div>

@@ -1,5 +1,6 @@
 .grid-abecedario{
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(7, min-content);
     grid-template-rows: repeat(5, min-content);
 }

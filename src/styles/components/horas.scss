@@ -1,12 +1,26 @@
-.trys{
-    text-align: center;
-    border-radius: 29px;
-    padding: 40px 50px 40px 50px;
+
+.time-card{
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content 1fr;
+    border-radius: 20px;
+    height: fit-content;
+    gap: 10px;
+
+    & > .title{
+        width: fit-content;
+        font-size: 14px;
+        text-align: center;
+        word-wrap: break-word;
+        word-break: break-all;
+        align-self: center;
+    }
+
+    & > .hours{
+        place-self: center;
+        grid-column: span 2;
+        font-size: 25px;
+        font-family: var(--font-anton);
+    }
 }
-.text-try{
-    font-size: 30px;
-}
-.rest-try{
-    font-size: 40px;
-    font-weight: bold;
-}
+

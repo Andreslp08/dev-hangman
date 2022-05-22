@@ -7,7 +7,8 @@ export const GameOverModal = (props) => {
     return (
         <Modal
             visible={visible}
-            setVisible={setVisible}>
+            setVisible={setVisible}
+            hideCloseButton={true}>
             <div className="flex flex-col items-center">
                 <Icon icon={'fa6-solid:face-sad-tear'} style={{ fontSize: 50, color:'#670000' }}  />
                 <p className="titulo text-lg m-1">Perdiste!</p>

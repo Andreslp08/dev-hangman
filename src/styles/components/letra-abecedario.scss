@@ -1,9 +1,6 @@
 .letra-abecedario{
-    font-size: 48px;
-    width: 72.42px;
-    height: 81.09px;
-    // padding: 10px 10px 10px 10px;
-    margin: 17px 20px 24px 9px;
+    min-width: 40px;
+    min-height: 40px;
     pointer-events: all;
     &.disabled{
         background-color: var(--on-disabled);
