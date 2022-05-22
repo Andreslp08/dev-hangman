@@ -7,8 +7,6 @@ export const Puntaje = () => {
 
   return (
     <h2>puntaje: {appStatus.puntaje}
-    
-    <button onClick={()=>{  dispatch({   type: types.removeTrys, payload: appStatus})}}>ssds</button>
     </h2>
   )
 }
