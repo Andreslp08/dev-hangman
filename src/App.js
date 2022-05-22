@@ -24,7 +24,8 @@ function App() {
           categoria: '',
           palabra: '',
           estado: 'LOBBY',
-          dificultad: ''
+          dificultad: '',
+          palabraInsertada:''
         };
   }
 

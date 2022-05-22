@@ -1,3 +1,6 @@
+// vendors
+@import './vendors/normalize.scss';
+
 // base
 @import './base/base.scss';
 @import './base/font.scss';
@@ -13,9 +16,6 @@
 //vistas
 @import './views/menu.scss';
 @import './views/partida.scss';
-
-
-
 
 
 

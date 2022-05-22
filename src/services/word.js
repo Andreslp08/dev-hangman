@@ -3,23 +3,23 @@ export class WordService {
     /**
      * 
      * @param {string} word 
-     * @param {string} letter 
+     * @param {string} char 
      * @returns 
      */
-    static hasLetter(word = '', letter = '') {
-        return word.includes(letter);
+    static hasChar(word = '', char = '') {
+        return word.toLowerCase().includes(char.toLowerCase());
     }
     /**
      * 
      * @param {string} word 
-     * @param {string} letter 
+     * @param {string} char 
      * @returns 
      */
-    static getLetterIndex(word = '', letter = '') {
+    static getCharIndex(word = '', character = '') {
         const chars = word.split('');
         const indexes = [];
         chars.forEach((char,i)=>{
-            if(char === letter){
+            if(character.toLowerCase() === char.toLowerCase()){
                 indexes.push(i)
             }
         })
@@ -28,7 +28,7 @@ export class WordService {
         /**
      * 
      * @param {string} word 
-     * @param {string} letter 
+     * @param {string} secondWord 
      * @returns 
      */
          static areEqual(word = '', secondWord='') {

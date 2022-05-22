@@ -11,45 +11,50 @@ import { ESTADOS } from './../constants/constants'
 //   })
 
 
-export const AppReducer = (state = {}, action) =>{
+export const AppReducer = (state = {}, action) => {
     switch (action.type) {
         case types.addPoint:
             return {
                 ...action.payload,
-            }    
-        case types.category :
-            return {
-                ...action.payload,
-            } 
-        case types.palabra :
-            return {
-                ...action.payload,
-            } 
-        case types.removeTrys :
-            return {
-                ...action.payload,
-                intentos : state.intentos - 1
             }
-        case types.setFinish :
+        case types.category:
             return {
                 ...action.payload,
-                estado : ESTADOS.partidaFinalizada
-            } 
-        case types.setLobby :
+            }
+        case types.palabra:
             return {
                 ...action.payload,
-                estado : ESTADOS.lobby
-            } 
-        case types.setWinner :
+            }
+        case types.removeTry:
             return {
                 ...action.payload,
-                estado : ESTADOS.partidaGanada
-            } 
-        case types.setStart :
+                intentos: state.intentos - 1
+            }
+        case types.setFinish:
             return {
                 ...action.payload,
-                estado : ESTADOS.partidaIniciada
-            } 
+                estado: ESTADOS.partidaFinalizada
+            }
+        case types.setLobby:
+            return {
+                ...action.payload,
+                estado: ESTADOS.lobby
+            }
+        case types.setWinner:
+            return {
+                ...action.payload,
+                estado: ESTADOS.partidaGanada
+            }
+        case types.setStart:
+            return {
+                ...action.payload,
+                estado: ESTADOS.partidaIniciada
+            }
+            case types.changeEnteredWord:
+                return {
+                    ...action.payload,
+                    estado: ESTADOS.partidaIniciada
+                }
         default:
             return state;
     }

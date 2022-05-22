@@ -17,7 +17,6 @@ export const ProgressComponent = () => {
   const [image, setImage] = useState( spriteinitial );
 
   useEffect(() => {
-    console.log(appStatus.intentos);
     switch (appStatus.intentos) {
     
       case 7:
@@ -44,7 +43,6 @@ export const ProgressComponent = () => {
         if( appStatus.dificultad === DIFFICULTIES.NORMAL ){
           setImage(sprite5);
         }else if(appStatus.dificultad === DIFFICULTIES.HARD){
-          console.log("entre");
           setImage(sprite1);
         }else{
           setImage(sprite5);

@@ -1,8 +1,8 @@
 
 export const Letra = ({letra}) => {
   return (
-    <div className="lyrics-word">
-       { letra }
+    <div className="char-box">
+      <p>{ letra }</p>
     </div>
   )
 }

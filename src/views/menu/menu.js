@@ -3,6 +3,7 @@ import { AppContext } from '../../context/app-context';
 import { ProgressComponent } from './components/progress'
 import { types } from '../../types/types';
 import { DIFFICULTIES } from '../../constants/constants';
+import { RandomService } from '../../services/random';
 
 export const MenuView = () => {
   const {appStatus , dispatch} = useContext(AppContext);
@@ -26,13 +27,16 @@ export const MenuView = () => {
         break;
     }
 
+    const randomCategory = RandomService.getRandomCategory();
+    const randomWord = RandomService.getRandomWord(randomCategory?.id);
+
     const action = {
       type: types.setStart,
       payload: {
         puntaje: 0,
         intentos: tries,
-        categoria: '',
-        palabra: '',
+        categoria: randomCategory?.name || 'N/A',
+        palabra: randomWord,
         estado: '',
         dificultad: difficult
       }

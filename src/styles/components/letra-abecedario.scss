@@ -4,4 +4,10 @@
     height: 81.09px;
     // padding: 10px 10px 10px 10px;
     margin: 17px 20px 24px 9px;
+    pointer-events: all;
+    &.disabled{
+        background-color: var(--on-disabled);
+        color: var(--disabled);
+        pointer-events: none;
+    }
 }
