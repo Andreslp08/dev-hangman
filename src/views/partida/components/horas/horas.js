@@ -7,8 +7,8 @@ export const Horas = () => {
 
   return (
     <div className="main-box trys">
-         <p>horas restantes para le entrega</p>
-         <span>{appStatus.intentos}: 00 Horas</span>
+         <p className="text-try">horas restantes para le entrega</p>
+         <p className="rest-try"><span id="intento">{appStatus.intentos}</span>: 00 Horas</p>
 
     </div>
   )
