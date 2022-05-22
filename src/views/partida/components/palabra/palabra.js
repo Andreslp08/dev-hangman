@@ -1,4 +1,4 @@
-import { Letra } from "../letra/Letra";
+import { Letra } from "../letra/letra";
 
 
 export const Palabra = ({palabra}) => {
