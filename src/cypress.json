@@ -1,0 +1,12 @@
+{
+    "testFiles" : "**/*.feature",
+    "requestTimeout": 10000,
+    "defaultCommandTimeout": 15000,
+    "pageLoadTimeOut": 15000,
+    "ScreenShotOnRunFailure": true,
+    "trashAssetsBeforeRuns": true,
+    "env": {
+        "url": "http://localhost:3000/"
+    }
+
+}

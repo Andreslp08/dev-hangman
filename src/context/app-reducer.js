@@ -28,6 +28,7 @@ export const AppReducer = (state = {}, action) =>{
         case types.removeTrys :
             return {
                 ...action.payload,
+                intentos : state.intentos - 1
             }
         case types.setFinish :
             return {
