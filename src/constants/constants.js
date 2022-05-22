@@ -12,5 +12,9 @@ export const ESTADOS = {
     partidaFinalizada: 'PARTIDA_FINALIZADA',
     lobby: 'LOBBY'
   }
-  
-  
+
+export const DIFFICULTIES = {
+    EASY: 'EASY',
+    NORMAL: 'NORMAL',
+    HARD: 'HARD'
+}

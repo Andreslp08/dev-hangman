@@ -2,7 +2,6 @@ import { Letra } from "../letra/letra";
 
 
 export const Palabra = ({palabra}) => {
-  console.log("aaa");
   return (
     <div>
      <div className="letter-container">

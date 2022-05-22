@@ -2,7 +2,7 @@
 export const Letra = ({letra}) => {
   return (
     <div className="lyrics-word">
-       { letra } kjlkj
+       { letra }
     </div>
   )
 }
