@@ -8,7 +8,6 @@ import { RandomService } from '../../services/random';
 export const MenuView = () => {
   const {appStatus , dispatch} = useContext(AppContext);
 
-
   const hanndleChoseDifficult= (difficult)=>{
     let tries = 0;
     switch (difficult) {

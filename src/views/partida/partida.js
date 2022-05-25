@@ -34,6 +34,11 @@ const INTENTOS = {
 export const PartidaView = () => {
     const { appStatus, dispatch } = useContext(AppContext);
 
+    //guardar palabra en localstorage para poder pasar las pruebas
+    localStorage.setItem('contiene', appStatus.palabra.charAt(0));
+    localStorage.setItem('no-contiene', WordService.itDoesNotHave(appStatus.palabra));
+    localStorage.setItem('cantidadDeLetra', appStatus.palabra.length);
+
     const [visibilityWinnerModal, setVisibilityWinnerModal] = useState(false);
     const [visibilityGameOverModal, setVisibilityGameOverModal] = useState(false);
     const [visibilityConfigModal, setVisibilityConfigModal] = useState(false);

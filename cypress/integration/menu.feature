@@ -28,3 +28,5 @@ Scenario: Seleccion de la dificultad dificil
     When Click en dificultad dificil
     Then Accedo a la partida en dificultad dificil
 
+
+

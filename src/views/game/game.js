@@ -8,7 +8,6 @@ import { PartidaView } from "../partida/partida";
 export const Game = () => {
 
     const {appStatus , dispatch} = useContext(AppContext);
-    console.log(appStatus)
 
 
   return (

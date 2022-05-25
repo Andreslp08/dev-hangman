@@ -9,11 +9,11 @@ Given('Accedo al menu para jugar en dificultad Facil', ()=>{
 })
 
 And ('Busco la dificultad fácil', ()=>{
-    cy.get('.button-difficult > button').contains('Facil')
+    cy.get('.button-difficult > button').contains('Fácil')
 
 })
 When ('Click en dificultad fácil', ()=>{
-    cy.get('.button-difficult > button').contains('Facil').click()
+    cy.get('.button-difficult > button').contains('Fácil').click()
 })
 
 Then ('Accedo a la partida en dificultad Facil', ()=>{
@@ -47,17 +47,15 @@ Given('Accedo al menu para jugar en dificultad dificil', ()=>{
 })
 
 And ('Busco la dificultad dificil', ()=>{
-    cy.get('.button-difficult > button').contains('Dificil')
+    cy.get('.button-difficult > button').contains('Difícil')
 
 })
 When ('Click en dificultad dificil', ()=>{
-    cy.get('.button-difficult > button').contains('Dificil').click()
+    cy.get('.button-difficult > button').contains('Difícil').click()
 })
 
 Then ('Accedo a la partida en dificultad dificil', ()=>{
     cy.get('.grid-item-partida').should('exist')
 })
-
-
 
 

@@ -10,10 +10,10 @@ export const ConfigModal = (props) => {
             setVisible={setVisible}>
             <div className="flex flex-col items-center">
                 <button 
-                    className="primary-button-bordered border-medium p-1 m-2" 
+                    className="primary-button-bordered border-medium p-1 m-2" id="menu-btn" 
                     onClick={() => onReturnToMenu && onReturnToMenu()}>Menu</button>
                 <button 
-                    className="primary-button-bordered border-medium p-1 m-2" 
+                    className="primary-button-bordered border-medium p-1 m-2" id="again-btn"
                     onClick={() => onRestartGame && onRestartGame()}>Jugar de nuevo</button>
             </div>
         </Modal>

@@ -1,3 +1,4 @@
+import { DATA_ABECEDARIO } from "../static/categories";
 
 export class WordService {
     /**
@@ -33,5 +34,23 @@ export class WordService {
      */
          static areEqual(word = '', secondWord='') {
             return word.toLowerCase() === secondWord.toLowerCase();
+        }
+
+
+    /**
+    * @param {string} word 
+    * @returns 
+    */
+
+    static itDoesNotHave (word=''){
+        let notHave = '';
+        DATA_ABECEDARIO.map((char)=>{
+            
+            if(!word.includes(char)) {
+                notHave = char;
+            }
+        }
+        )
+        return notHave;
         }
 }
