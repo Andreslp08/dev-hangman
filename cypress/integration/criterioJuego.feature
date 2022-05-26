@@ -20,36 +20,39 @@ Scenario: Como jugador quiero al selecionar la dificultad difícil que me aperez
     Then el usuario tendra 3 oportunidades por defecto
 
 
-# Scenario: Como sistema quiero eliminar un intento cuando el jugador inserte una letra incorrecta.
+Scenario: Como sistema quiero eliminar un intento cuando el jugador inserte una letra incorrecta.
 
-#     Given Que el jugador ha seleccionado una letra
-#     And la letra seleccionada es erronea
-#     Then se elimina un globo, es decir, un intento.
-
-
-# Scenario: Como jugador quiero  ver mi progreso por medio de imagenes en pantalla
-
-#     Given Que el jugador escoja una letra 
-#     And la letra seleccionada sea erronea
-#     Then se actualiza el estado grafico del dibujo y del jugador.
-
-# Scenario: Como jugador quiero poder pasar al siguiente nivel al completar la palabra
-
-#     Given Que el jugador complete la palabra
-#     And la palabra este correcta
-#     Then se gana la partida y permitiria iniciar una nueva partida.
+     Given Que el jugador ha seleccionado una letra
+     When la letra seleccionada es erronea
+     Then se elimina un intento.
 
 
-# Scenario: Como jugador quiero Terminar el juego(partida perdida)
+Scenario: Como jugador quiero  ver mi progreso por medio de imagenes en pantalla
 
-#     Given que el jugador se encuentre en partida
-#     And Que el jugador no tenga más oportunidades, es decir, intentos
-#     Then se finaliza la partida.
+    Given Que el jugador se encuentre en una partida
+    And escoja una letra erronea
+    Then se actualiza el estado grafico del dibujo y del jugador.
+
+Scenario: Como jugador quiero poder pasar al siguiente nivel al completar la palabra
+
+    Given Que el jugador se encuentre en un juego
+    And Que el jugador complete la palabra
+    Then se gana la partida y permitiria iniciar una nueva partida.
+
+Scenario: Como jugador quiero Terminar el juego(partida perdida)
+
+     Given que el jugador se encuentre en una partida
+     And el jugador prierde la primera oportunidad
+     And el jugador prierde la segunda oportunidad
+     Then el jugador prierde la tercera oportunidad y se finaliza la partida 
 
 
-# Scenario: Como jugador quiero Terminar el juego
+Scenario: Como jugador quiero Terminar el juego
 
-#     Given que el jugador se encuentre en partida
-#     And Que el jugador no quiera continuar con la partida actual
-#     Then se finaliza la partida.
+    Given que el jugador se encuentre en partida
+    And Que el jugador no quiera continuar con la partida actual
+    And El jugador slecciona el menu
+    Then El jugador vuelve a la pagina inicial
+
+    
 

@@ -38,6 +38,7 @@ export const PartidaView = () => {
     localStorage.setItem('contiene', appStatus.palabra.charAt(0));
     localStorage.setItem('no-contiene', WordService.itDoesNotHave(appStatus.palabra));
     localStorage.setItem('cantidadDeLetra', appStatus.palabra.length);
+    localStorage.setItem('palabra', appStatus.palabra.toUpperCase());
 
     const [visibilityWinnerModal, setVisibilityWinnerModal] = useState(false);
     const [visibilityGameOverModal, setVisibilityGameOverModal] = useState(false);
