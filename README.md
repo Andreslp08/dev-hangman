@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# DEV HANGMAN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Integrantes
 
-## Available Scripts
+* Andrés López
+* Juan David Romero
+* Juan Diego Estupiñan
+* Julián Enrique Correo
+* Samuel Parra 
 
-In the project directory, you can run:
+## Herramientas utilizadas
+- [React JS](https://react.org): Framework de interfaces gráficas de JavaScript | V18.1.0
+- [Node JS](https://nodejs.org): Entorno de tiempo de ejecución de JavaScript | V17.3.1
+- [Cypress](https://www.cypress.io): Herramienta de testing de construida para la web moderna | V19.6.1
+- [Figma](https://www.figma.com): Herramienta de prototipado web y editor de gráficos vectorial | V7.4.1
+- [Excel](https://www.microsoft.com/en-us/microsoft-365/excel): Hojas de cálculo multifuncionales | V2019
+- [Git](https://git-scm.com): Sistema de control de versiones distribuido | V2.36.1
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ¿Qué hace la aplicación?
+Dev Hangman es un juego basado en las mecánicas del popular juego 'Ahorcado'. Aquí el jugador deberá encontrar la palabra correcta de cada nivel antes de que se agoten los  intentos, lo que para el personaje principal son horas laborales. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+El jugador será representado como un desarrollador, en donde si se logra encontrar la palabra antes de que los intentos se agoten, se ganará la partida y por ende el personaje terminará su trabajo a tiempo, pero si los intentos superan en límite, el desarrollador no entregará su trabajo a la hora acordada, por ende será despedido.
 
-### `npm test`
+Este juego cuenta con 3 niveles de dificultad, representado en que a mayor sea el nivel, el jugador dispondrá de menos intentos, haciendo de cada estilo de juego uno más retador para el jugador.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instrucciones
+### `Clonar`
+Para clonar el repositorio utilice el siguiente comando en su línea de comandos de [Git](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiF4-jGo_b3AhWVtYQIHfoBAlMQFnoECAwQAQ&url=https%3A%2F%2Fgit-scm.com%2F&usg=AOvVaw1lFNWgbWf8FsbaoU4AOPBr)
 
-### `npm run build`
+```sh
+git clone https://github.com/Andreslp08/dev-hangman.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Si lo desea también puede dirigirse al repositorio del proyecto, allí seleccione 'code' y podrá también descargar el proyecto en formato ZIP.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para que el proyecto funcione correctamente no olvide ejecutar el comando inferior para descargar las dependencias del proyecto.
+```sh
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Ejecutar`
+Si desea ejecutar el proyecto en su ambiente local dirijase a la terminal de comandos de su preferencia y ejecute el comando que encontrará en la parte inferior
+```sh
+npm start
+```
+Una vez ejecutado el proyecto correrá por defecto en el puerto que encontrará debajo.
+```sh
+http://localhost:3000
+```
 
-### `npm run eject`
+### `Ambiente de pruebas`
+Para ejecutar el ambiente de pruebas impulsado por Cypress ejecute el siguiente comando.
+```sh
+npm run cypress:open
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `Desplegar en producción`
+Si desea desplegar el proyecto o guardarlo en un repositorio ejecute en orden los siguientes comandos
+```sh
+npm run build
+git init
+git add .
+git commit -m 'Commit'
+git branch -M main
+git remote add origin /tu repositorio/
+git push -u origin main
+```
+#### `Despliegue Github Pages`
+Una vez con el código en el repositorio hay que dirigirse a `Settings`, posteriormente nos dirigimos a `Pages`, seleccionamos nuestra carpeta raíz, generamos nuestra página, esperamos unos minutos y accedemos al link de nuestro proyecto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Historias de usuario
+Para consultar todas las historias de usuario de Dev Hangman consulte el siguiente [documento](https://unipanamericanaeduco-my.sharepoint.com/:x:/g/personal/jestupinanr_ucompensar_edu_co/EVBjK5M-REZHj5g_UtufxgYBgDz7gbLGeNIKy1GTI2dJIA?rtime=JBXBDuM82kg) 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Features Gherkin
+- `alfabeto.feature`
+- `categoriasPalabras.feature`
+- `configuracion.feature`
+- `criterioJuego.feature`
+- `menu.feature`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Consulta los features en el [siguiente enlace](https://cucumber.io/docs/gherkin/reference/)
 
-## Learn More
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Conclusiones
+Las pruebas BDD mediante Cypress potenciado con Cucumber y Gherkin fueron muy sencillas, satisfactorias e intuitivas para todo el equipo, cambiando un poco la psique que se tenía al momento de realizar pruebas por algunos integrantes del equipo, que las consideraban tediosas ya que algunas veces tomaban casi el mismo tiempo que un desarrollo. 
+ 
+El impacto que tuvo en la calidad del producto fue enorme, ya que al momento de realizar cambios o actualizaciones en el sistema, se corrían las pruebas para comprobar el correcto funcionamiento del mismo, lo que permitía dejar versiones estables en cada release.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Por último, gracias a estas pruebas se pudieron comprender mejor los escenarios que debía enfrentar el usuario final, ya que el objetivo de las pruebas era simular actividades que pudiese ejecutar una persona. Este aspecto hizo entender de mejor manera el UX y entender la estructura del producto de cara a los usuarios.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
