@@ -7,6 +7,6 @@
   "ScreenShotOnRunFailure": true,
   "trashAssetsBeforeRuns": true,
   "env": {
-      "url": "http://localhost:3001/"
+      "url": "http://localhost:3000/"
   }
 }
